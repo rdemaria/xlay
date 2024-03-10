@@ -1,0 +1,20 @@
+MB:  [Bend, length: 3, angle: 90]
+MBR: [Bend, length: 3, angle: 0]
+
+MQ:
+  - Quadrupole
+  - length: 10
+
+MQS: [Quadrupole, tilt: 45]
+
+MBB:
+    - Beamline
+    - MB.1: [MBR, at: -5, ref_angle: 45, ref_length: 4, tx: 0.3, ry: 5, tx: -0.1]
+    - MB.2: [MBR, at:  5, ref_angle: 45, ref_length: 4, tx: 0.3, ry: 5, tx: -0.1]
+
+RING:
+   - Beamline
+   - MB.1: [MB, at: 5, ref: center]
+   - MB.2: [MB, at: 25, ref: center]
+   - MB.3: [MB, at: 45, ref: center]
+   - MBB:  [MBB, at: 65, tx: 0.4, ref: center]

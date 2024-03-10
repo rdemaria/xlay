@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xlay"
+version = "0.0.0"
+description = "Library for 3D layout management"
+authors = [{ name = "Riccardo De Maria", email = "riccardodemaria@gmail.com" }]
+license = { text = "MIT" }
+urls = { homepage = "https://github.com/rdemaria/xlay", repository = "https://github.com/rdemaria/xlay" }
+keywords = ["geometry"]
+dependencies = [ "numpy", "matplotlib"]
+
+[tool.black]
+line-length = 79

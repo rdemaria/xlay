@@ -1,0 +1,22 @@
+MB:  [Bend, length: 3, angle: 90]
+MBR: [Bend, length: 3, angle: 0]
+
+MQ:
+  - Quadrupole
+  - length: 10
+
+MQS: [Quadrupole, tilt: 45]
+
+MBB:
+    - Beamline
+    - MB.1: [MBR, at: -5, ref_angle: 45, ref_length: 4, tx: 0.3, ry: 5, tx: -0.1]
+    - MB.2: [MBR, at:  5, ref_angle: 45, ref_length: 4, tx: 0.3, ry: 5, tx: -0.1]
+
+RING:
+   - Beamline
+   - IP1: [Marker, at: 0 ]
+   - LSS1: [Region, at: 5, from: IP1, to: S.DS.L7.B1]
+   - S.DS.L7.B1: [Marker, from: MB.A7R1.B1/start]
+   - MB.2: [MB, at: 25, ref: center]
+   - MB.3: [MB, at: 45, ref: center]
+   - MBB:  [MBB, at: 65, tx: 0.4, ref: center]
