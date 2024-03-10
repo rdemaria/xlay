@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail; IFS=$'\n\t'
 
-NAME=lay
+NAME=xlay
 VER=$( python -c "import $NAME; print($NAME.__version__)" )
 
 echo "========================================================================"
